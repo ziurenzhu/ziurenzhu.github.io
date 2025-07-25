@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>某某家具 · 电子画册</title>
+  <style>
+    /* ===== 基础 ===== */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+    body{background:#f7f7f7;color:#333}
+    img{max-width:100%;display:block}
+    /* ===== 头部 ===== */
+    header{background:#fff;text-align:center;padding:20px 0}
+    header img{height:48px;margin:0 auto 10px}
+    header h1{font-size:20px;font-weight:400;color:#555}
+    /* ===== 产品网格 ===== */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:12px}
+    .card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .card p{padding:12px 10px;font-size:15px;text-align:center}
+    /* ===== 底部 ===== */
+    footer{background:#fff;margin-top:20px;padding:15px;text-align:center;font-size:12px;color:#999}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="LOGO">
+    <h1>构建美好生活 · 某某家具</h1>
+  </header>
+
+  <section class="gallery">
+    <!-- 以下每 1 组 <div class="card">…</div> 就是一个产品 -->
+    <div class="card">
+      <img src="images/1.jpg" alt="沙发系列">
+      <p>沙发系列</p>
+    </div>
+    <div class="card">
+      <img src="images/2.jpg" alt="餐桌椅">
+      <p>餐桌椅</p>
+    </div>
+    <div class="card">
+      <img src="images/3.jpg" alt="儿童家具">
+      <p>儿童家具</p>
+    </div>
+    <div class="card">
+      <img src="images/4.jpg" alt="收纳柜">
+      <p>收纳柜</p>
+    </div>
+    <div class="card">
+      <img src="images/5.jpg" alt="定制空间">
+      <p>定制空间</p>
+    </div>
+    <div class="card">
+      <img src="images/6.jpg" alt="线上新品">
+      <p>线上新品</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2024 某某家具有限公司
+  </footer>
+
+  <!-- 可选：点击放大（最轻量实现） -->
+  <script>
+    document.querySelectorAll('.card img').forEach(img=>{
+      img.style.cursor='zoom-in';
+      img.addEventListener('click',()=>window.open(img.src,'_blank'));
+    });
+  </script>
+</body>
+</html>
